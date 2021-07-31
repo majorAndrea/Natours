@@ -1,0 +1,43 @@
+//COLORS
+$color-primary-light: #279ece;
+$color-primary-medium: #0988c3;
+$color-primary-dark: #2857a4;
+
+$color-secondary: #9eb3c2;
+
+$color-tertiary: #ffb900;
+$color-tertiary-alt: #ff7730;
+
+$color-green-light: #55c57a;
+$color-green-dark: #7ed56f;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-light-3: #999;
+$color-grey-dark: #777;
+$color-grey-dark-intense: #333;
+
+$color-white: #fff;
+$color-black: #000;
+$color-purple: #5643fa;
+
+// FONT
+$default-font-size: 1.6rem;
+
+// GRID
+$grid-with: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+// BOX SHADOWS
+$box-shadow-1-expanded: 0 1rem 2rem rgba($color-black, 0.25);
+$box-shadow-1: 0 1rem 2rem rgba($color-black, 0.15);
+
+$box-shadow-2-expanded: 0 0.5rem 1rem rgba($color-black, 0.25);
+$box-shadow-2: 0 0.5rem 1rem rgba($color-black, 0.25);
+
+$box-shadow-3-expanded: 0 2.5rem 4rem rgba($color-black, 0.5);
+$box-shadow-3: 0 1.5rem 4rem rgba($color-black, 0.4);
+
+$box-shadow-4: 0 3rem 6rem rgba($color-black, 0.2);

@@ -1,0 +1,101 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all 0.12s;
+    position: relative;
+    font-size: $default-font-size;
+
+    // Change for the <button> element.
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(0.3rem);
+    box-shadow: $box-shadow-1-expanded;
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(0.1rem);
+    box-shadow: $box-shadow-2-expanded;
+  }
+
+  // Focus break the translate if using the same style props as :active.
+  &:focus {
+    outline: none;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+    display: inline-block;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--blue {
+    background-color: $color-primary-medium;
+    color: $color-white;
+    display: inline-block;
+
+    &::after {
+      background-color: $color-primary-medium;
+    }
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary-medium;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.1rem solid $color-primary-medium;
+    padding: 0.3rem;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $color-primary-medium;
+    color: $color-white;
+    box-shadow: $box-shadow-1;
+    transform: translateY(-0.2rem);
+  }
+
+  &:active {
+    box-shadow: $box-shadow-2;
+    transform: translateY(0);
+  }
+}
