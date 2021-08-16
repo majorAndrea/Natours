@@ -12,6 +12,7 @@
 
   &__content {
     @include centerContent;
+
     width: 75%;
     background-color: $color-white;
     box-shadow: $box-shadow-1;

@@ -53,11 +53,8 @@
   }
 
   &__caption {
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, 25%);
     @include centerContent($y: 25%);
+
     color: $color-white;
     font-size: 1.7rem;
     text-align: center;

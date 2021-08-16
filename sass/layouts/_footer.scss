@@ -44,17 +44,18 @@
       margin-right: 1.5rem;
     }
 
-    &:nth-child(2n) {
-      &:active,
-      &:hover {
-        transform: rotate(5deg);
-      }
-    }
-
     &:not(:nth-child(2n)) {
       &:active,
       &:hover {
         transform: rotate(-5deg);
+      }
+    }
+
+    /* stylelint-disable */
+    &:nth-child(2n) {
+      &:active,
+      &:hover {
+        transform: rotate(5deg);
       }
     }
   }

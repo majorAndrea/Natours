@@ -24,6 +24,11 @@
       width: 100%;
     }
 
+    &::-webkit-input-placeholder {
+      color: $color-grey-light-3;
+      opacity: 1;
+    }
+
     &:focus {
       outline: none;
       border-bottom: 0.3rem solid $color-green-light;
@@ -34,11 +39,6 @@
     }
 
     &::placeholder {
-      color: $color-grey-light-3;
-      opacity: 1;
-    }
-
-    &::-webkit-input-placeholder {
       color: $color-grey-light-3;
       opacity: 1;
     }
