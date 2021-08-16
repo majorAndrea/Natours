@@ -45,15 +45,15 @@
     }
 
     &:nth-child(2n) {
-      &:hover,
-      &:active {
+      &:active,
+      &:hover {
         transform: rotate(5deg);
       }
     }
 
     &:not(:nth-child(2n)) {
-      &:hover,
-      &:active {
+      &:active,
+      &:hover {
         transform: rotate(-5deg);
       }
     }
@@ -70,8 +70,8 @@
       transition: all 0.2s;
     }
 
-    &:hover,
-    &:active {
+    &:active,
+    &:hover {
       color: $color-primary-medium;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
       transform: scale(1.3);

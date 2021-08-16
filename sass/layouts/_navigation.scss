@@ -42,10 +42,7 @@
     position: fixed;
     top: 6.5rem;
     right: 6.5rem;
-    background-image: radial-gradient(
-      $color-primary-light,
-      $color-primary-dark 30%
-    );
+    background-image: radial-gradient($color-primary-light, $color-primary-dark 30%);
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
@@ -67,7 +64,7 @@
     left: 0;
     z-index: 1500;
     opacity: 0;
-    width: 0px;
+    width: 0;
     transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     visibility: hidden;
   }
@@ -95,18 +92,13 @@
       color: $color-white;
       text-decoration: none;
       text-transform: uppercase;
-      background-image: linear-gradient(
-        120deg,
-        transparent 0%,
-        transparent 50%,
-        $color-white 50%
-      );
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
       background-size: 250%;
       transition: all 0.5s ease-out;
     }
 
-    &:hover,
-    &:active {
+    &:active,
+    &:hover {
       background-position: 100%;
       color: $color-primary-medium;
       transform: translateX(-1rem);
@@ -136,16 +128,16 @@
     margin-top: 3.5rem;
 
     &,
-    &::before,
-    &::after {
+    &::after,
+    &::before {
       width: 3rem;
       height: 2px;
       background-color: $color-grey-dark;
       display: inline-block;
     }
 
-    &::before,
-    &::after {
+    &::after,
+    &::before {
       content: "";
       position: absolute;
       left: 0;
@@ -155,6 +147,7 @@
     &::before {
       top: -0.8rem;
     }
+
     &::after {
       top: 0.8rem;
     }
