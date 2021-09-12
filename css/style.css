@@ -658,6 +658,10 @@ body {
     width: 100%;
   }
 }
+.form__input::-webkit-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
 .form__input:focus {
   outline: none;
   border-bottom: 0.3rem solid #55c57a;
@@ -666,10 +670,6 @@ body {
   border-bottom: 0.3rem solid #ff7730;
 }
 .form__input::placeholder {
-  color: #999;
-  opacity: 1;
-}
-.form__input::-webkit-input-placeholder {
   color: #999;
   opacity: 1;
 }
@@ -856,6 +856,28 @@ body {
 .navigation__checkbox {
   display: none;
 }
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem;
+}
+.navigation__icon, .navigation__icon::after, .navigation__icon::before {
+  width: 3rem;
+  height: 2px;
+  background-color: #777;
+  display: inline-block;
+}
+.navigation__icon::after, .navigation__icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+.navigation__icon::before {
+  top: -0.8rem;
+}
+.navigation__icon::after {
+  top: 0.8rem;
+}
 .navigation__button {
   background-color: #fff;
   height: 7rem;
@@ -965,28 +987,6 @@ body {
 }
 .navigation__checkbox:checked ~ .navigation__nav .navigation__list {
   opacity: 1;
-}
-.navigation__icon {
-  position: relative;
-  margin-top: 3.5rem;
-}
-.navigation__icon, .navigation__icon::after, .navigation__icon::before {
-  width: 3rem;
-  height: 2px;
-  background-color: #777;
-  display: inline-block;
-}
-.navigation__icon::after, .navigation__icon::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  transition: all 0.2s;
-}
-.navigation__icon::before {
-  top: -0.8rem;
-}
-.navigation__icon::after {
-  top: 0.8rem;
 }
 .navigation__checkbox:checked + .navigation__button .navigation__icon {
   background-color: transparent;
@@ -1118,6 +1118,7 @@ body {
   width: 15rem;
   height: auto;
   filter: brightness(1.5);
+  margin: 0 auto;
 }
 .footer__navigation {
   border-top: 1px solid #777;
@@ -1136,15 +1137,16 @@ body {
 .footer__item {
   display: inline-block;
   transition: all 0.2s;
+  /* stylelint-disable */
 }
 .footer__item:not(:last-child) {
   margin-right: 1.5rem;
 }
-.footer__item:nth-child(2n):active, .footer__item:nth-child(2n):hover {
-  transform: rotate(5deg);
-}
 .footer__item:not(:nth-child(2n)):active, .footer__item:not(:nth-child(2n)):hover {
   transform: rotate(-5deg);
+}
+.footer__item:nth-child(2n):active, .footer__item:nth-child(2n):hover {
+  transform: rotate(5deg);
 }
 .footer__link:link, .footer__link:visited {
   color: #999;
